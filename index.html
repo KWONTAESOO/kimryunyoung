@@ -3,10 +3,10 @@
 <head>
     <title>권태수 ❤️ 김륜영 의 결혼식에 초대합니다.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta property="og:image" content="https://sooji-taekwan.wedding/images/snt/gallery/2/0.jpg"/>
-    <meta property="og:url" content="https://sooji-taekwan.wedding"/>
-    <meta property="og:description" content="2022.10.01 1784 스카이홀 28층"/>
-    <meta property="og:title" content="권태❤️김륜영의 결혼식에 초대합니다."/>
+    <meta property="og:image" content="https://kwontaesoo.github.io/kimryunyoung/images/main.jpg"/>
+    <meta property="og:url" content="https://kwontaesoo.github.io/kimryunyoung/"/>
+    <meta property="og:description" content="2022.12.11 아펠가모 공덕점"/>
+    <meta property="og:title" content="권태수❤️김륜영의 결혼식에 초대합니다."/>
     <meta property="og:type" content="article" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="1200" />
@@ -49,7 +49,7 @@
     <style data-emotion="css" data-s=""></style>
     <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
     <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=87987d3ixu"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=537797782c0e32a54f6ca9efe75b3e8a"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQDXR28SS0"></script>
     <script>
@@ -393,11 +393,13 @@
         zoom: 14
     };
 
-    var map = new naver.maps.Map('map-canvas', mapOptions);
-    var marker = new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.3588812, 127.1052781),
-        map: map
-    });
+    var container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+        level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+
+    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
     $('.slider-for').slick({
         slidesToShow: 1,
