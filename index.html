@@ -3,7 +3,7 @@
 <head>
     <title>권태수 ❤️ 김륜영 의 결혼식에 초대합니다.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta property="og:image" content="https://kwontaesoo.github.io/kimryunyoung/images/main2.jpg"/>
+    <meta property="og:image" content="https://kwontaesoo.github.io/kimryunyoung/images/main.jpg"/>
     <meta property="og:url" content="https://kwontaesoo.github.io/kimryunyoung/"/>
     <meta property="og:description" content="2022.12.11 아펠가모 공덕점"/>
     <meta property="og:title" content="권태수❤️김륜영의 결혼식에 초대합니다."/>
@@ -163,7 +163,7 @@
                 <div class="col-xs-offset-1 col-xs-5 animation fadeIn animated" style="padding-right:5px;padding-left:0px;text-align:center;visibility: visible;line-height: 2em;border-right: solid 0.1px #e1e1e1; font-family: 'MapoFlowerIsland';">
                     <div style="margin-bottom: 30px">
                         <h3 style="margin-top: 0px;margin-bottom: 0px">신랑</h3>
-                        <span>권병우 ・ 류인숙</span><span style="font-size: 10px"> 의 차남</span><br>
+                        <span>권병우 ・ 유인숙</span><span style="font-size: 10px"> 의 차남</span><br>
                         <span style="margin-bottom: 50px">태 수</span>
                     </div>
                     <div class="photo-item fadeInUp animated" style="visibility: visible;object-fit: cover;border-radius: 50%;margin:auto;max-width: 200px">
@@ -343,10 +343,8 @@
                                 <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(06460204099745);">
                                 <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/FJKXvPoGk')">
                             </p>
-                            <p style="margin-bottom: 10px;">국민 008-05-0024-541 권병우(혼주)
-                                <br>
-                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(008050024541);">
-                            </p>
+                            <p style="margin-bottom: 10px;">국민 008-05-0024-541 권병우(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(008050024541);"></p>
+							<p style="margin-bottom: 10px;">국민 008-05-0024-541 유인숙(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(008050024541);"></p>
                         </div>
                         <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
                             <h2 class="h4">신부측</h2>
@@ -428,13 +426,21 @@
             alert("복사되었습니다.");
         });
     }
-    // container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
-    //var options = { //지도를 생성할 때 필요한 기본 옵션
-     //   center: new kakao.maps.LatLng(37.542906, 126.951608), //지도의 중심좌표.
-      //  level: 3 //지도의 레벨(확대, 축소 정도)
-    //};
+    container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(37.542906, 126.951608), //지도의 중심좌표.
+        level: 3 //지도의 레벨(확대, 축소 정도)
+    };
 
-    //var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    var map = new kakao.maps.StaticMap(container, options); //지도 생성 및 객체 리턴
+	
+	var markerPosition  = new kakao.maps.LatLng(37.5427105, 126.9516296); 
+	
+	var marker = new kakao.maps.Marker({
+    position: markerPosition
+	});
+	
+	marker.setMap(map);
 
     $('.slider-for').slick({
         slidesToShow: 1,
