@@ -49,7 +49,7 @@
     <style data-emotion="css" data-s=""></style>
     <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
     <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=537797782c0e32a54f6ca9efe75b3e8a"></script>
+    <!--script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=537797782c0e32a54f6ca9efe75b3e8a"></script-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQDXR28SS0"></script>
     <script>
@@ -166,7 +166,7 @@
                         <span>권병우 ・ 류인숙</span><span style="font-size: 10px"> 의 차남</span><br>
                         <span style="margin-bottom: 50px">태 수</span>
                     </div>
-                    <div class="photo-item fadeInUp animated" style="visibility: visible;object-fit: cover;border-radius: 50%;;margin:auto;max-width: 200px">
+                    <div class="photo-item fadeInUp animated" style="visibility: visible;object-fit: cover;border-radius: 50%;margin:auto;max-width: 200px">
                         <img src="./images/snt/man.jpg" alt="" >
                     </div>
                 </div>
@@ -194,7 +194,7 @@
                 </div>
                 <div class="col-md-offset-2 col-md-8 animation fadeIn animated" style="visibility: visible;padding-top: 10px; padding-bottom: 30px">
                     <div style="margin-top: 20px; position: relative; overflow: hidden;">
-                        <div id="map-canvas" style="width:100%;height:400px;"></div>
+                        <!-- div id="map-canvas" style="width:100%;height:400px;"></div -->
                         <div data-aos="fade-up" style="font-size:14px;font-weight:bold;padding-top:20px;padding-bottom:20px;display:flex;align-items:center;justify-content:center"
                              class="aos-init aos-animate">
                             <a href="https://map.kakao.com/?itemId=630786038" target="_blank">
@@ -333,8 +333,8 @@
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8 text-center">
                         <div class="text-center animation fadeInUp animated" style="visibility: visible;font-family: 'MapoFlowerIsland'">
-                            <h4 style="font-family: 'MapoFlowerIsland'">마음 전하실 곳</h4><br>
-                            참석이 어려우신 분들은 축하의 마음을 전달해주세요.
+                            <h4 style="font-family: 'MapoFlowerIsland'">신랑 & 신부에게 마음 전하기</h4>
+                            <h6>축복의 의미로 축의금을 전달해보세요.</h6>
                         </div>
                         <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
                             <h2 class="h4">신랑측</h2>
@@ -350,18 +350,15 @@
                         </div>
                         <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
                             <h2 class="h4">신부측</h2>
-                            <p style="margin-bottom: 10px;">카카오 01000000000 김륜영
+                            <p style="margin-bottom: 10px;">카카오 3333034236204 김륜영
                                 <br>
-                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(01000000000);">
+                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(3333034236204);">
                                 <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/Ej7nd3b1H')">
                             </p>
                             <p style="margin-bottom: 10px;">국민 202-21-1546-638 김성호(혼주)
                                 <br>
                                 <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(202211546638);">
                             </p>
-                        </div>
-                        <div class="text-center animation fadeInUp animated" style="visibility: visible;font-family: 'MapoFlowerIsland'">
-                            오늘 하루도 좋은 하루 보내시고, 여러분의 축하, 기도 부탁드립니다.
                         </div>
                     </div>
                 </div>
@@ -431,13 +428,13 @@
             alert("복사되었습니다.");
         });
     }
-    var container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
-    var options = { //지도를 생성할 때 필요한 기본 옵션
-        center: new kakao.maps.LatLng(37.542906, 126.951608), //지도의 중심좌표.
-        level: 3 //지도의 레벨(확대, 축소 정도)
-    };
+    // container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
+    //var options = { //지도를 생성할 때 필요한 기본 옵션
+     //   center: new kakao.maps.LatLng(37.542906, 126.951608), //지도의 중심좌표.
+      //  level: 3 //지도의 레벨(확대, 축소 정도)
+    //};
 
-    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    //var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -485,7 +482,7 @@ margin: 0 auto;
     font-family: Castoro,serif;
 line-height: 22px;
     text-align: center;">
-    <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2022. <a href="https://taetaetae.github.io/" style="text-decoration: underline;font-size: 12px" target="_blank">taetaetae</a>. All rights reserved.</div>
+    <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2022. Taez. All rights reserved.</div>
 </div>
 </body>
 </html>
