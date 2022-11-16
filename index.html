@@ -424,7 +424,7 @@
             alert("복사되었습니다.");
         });
     }
-    container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
+    var container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
     var options = { //지도를 생성할 때 필요한 기본 옵션
         center: new kakao.maps.LatLng(37.542906, 126.951608), //지도의 중심좌표.
         level: 3 //지도의 레벨(확대, 축소 정도)
