@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'MapoFlowerIsland';
-    src: url('./fonts/main.ttf') format('truetype');
+    src: url('./fonts/main2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'EarlyFontDiary';
-    src: url('./fonts/sub.ttf') format('truetype');
+    src: url('./fonts/sub2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
