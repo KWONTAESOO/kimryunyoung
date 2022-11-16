@@ -426,14 +426,6 @@
     };
 
     var map = new kakao.maps.StaticMap(container, options); //지도 생성 및 객체 리턴
-	
-	var markerPosition  = new kakao.maps.LatLng(37.5427105, 126.9516296); 
-	
-	var marker = new kakao.maps.Marker({
-    position: markerPosition
-	});
-	
-	map.addMarker(marker);
 
     $('.slider-for').slick({
         slidesToShow: 1,
