@@ -1,0 +1,7 @@
+
+analytics:
+  provider               : "google-gtag" 
+                          # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : "G-Z1P8RR0SR4"
+    anonymize_ip         : # true, false (default)
