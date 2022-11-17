@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/*============================== 
+/*==============================
 	- Template Name: FOREVER - Responsive HTML Wedding Template
 	- Author: DoubleEight
 	- Version: 1.02
@@ -2294,6 +2294,11 @@ a:hover .de-icon.effect3 {
     width: 69%;
 }
 
+.modal-content{
+  position: absolute;
+  vertical-align: middle;
+}
+
 /* ----------------------------------------------*/
 /* 10.5 Five Column No Gutter		 			 */
 /* ----------------------------------------------*/
@@ -2418,6 +2423,12 @@ form .btn-primary {
     background-color: #FFF;
     border-color: #cccccc;
 }
+.btn-wedding-primary {
+  color: #fff;
+  background-color: #575d62;
+  border-color: #929293;
+}
+
 
 form .btn-primary:hover,
 form .btn-primary:focus,

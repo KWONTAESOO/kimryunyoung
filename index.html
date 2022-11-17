@@ -36,9 +36,9 @@
     <!-- Icon -->
     <link rel="stylesheet" href="./resources/fontello.css" type="text/css" media="screen">
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"> -->
 
     <!-- Theme CSS -->
     <link href="./resources/style.css" rel="stylesheet" media="screen">
@@ -246,9 +246,6 @@
                             <img src="images/snt/saction/3.jpg" alt="">
                         </div>
                         <div class="photo-item">
-                            <img src="images/snt/saction/4.jpg" alt="">
-                        </div>
-                        <div class="photo-item">
                             <img src="images/snt/saction/5.jpg" alt="">
                         </div>
                         <div class="photo-item">
@@ -287,14 +284,6 @@
                             <div>
                                 <div style="width: 50px; height:50px;display: inline-block;">
                                     <div class="cover"></div>
-                                    <div class="thum" style="background-image:url(images/snt/saction/4.jpg)"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="photo-item">
-                            <div>
-                                <div style="width: 50px; height:50px;display: inline-block;">
-                                    <div class="cover"></div>
                                     <div class="thum" style="background-image:url(images/snt/saction/5.jpg)"></div>
                                 </div>
                             </div>
@@ -319,9 +308,51 @@
                 </div>
             </div>
 
-            
+
         </div>
     </section>
+    <div class="modal fade" id="manModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title">신랑측 마음 전하기</h5>
+          </div>
+          <div class="modal-body">
+          <p style="margin-bottom: 10px;">국민 064602-04-099745 권태수
+            <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(06460204099745);">
+            <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/FJKXvPoGk')">
+          </p>
+          <p style="margin-bottom: 10px;">국민 008-05-0024-541 권병우(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(008050024541);"></p>
+          <p style="margin-bottom: 10px;">국민 082-05-0014-838 유인숙(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(082050014838);"></p>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="womanModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title">신랑측 마음 전하기</h5>
+          </div>
+          <div class="modal-body">
+            <p style="margin-bottom: 10px;">카카오 3333-03-4236204 김륜영
+                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(3333034236204);">
+                <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/Ej7nd3b1H')">
+            </p>
+            <p style="margin-bottom: 10px;">국민 202-21-1546-638 김성호(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(202211546638);"></p>
+            <p style="margin-bottom: 10px;">국민 13081152-005236 변희숙(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(13081152005236);"></p>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="contact">
         <div class="image-divider auto-height" style="background-image:url(images/footer.jpg); padding-bottom: 100px;padding-top: 100px;">
@@ -336,24 +367,11 @@
                             <h6>축복의 의미로 축의금을 전달해보세요.</h6>
                         </div>
                         <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
-                            <h2 class="h4">신랑측</h2>
-                            <p style="margin-bottom: 10px;">국민 064602-04-099745 권태수
-                                <br>
-                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(06460204099745);">
-                                <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/FJKXvPoGk')">
-                            </p>
-                            <p style="margin-bottom: 10px;">국민 008-05-0024-541 권병우(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(008050024541);"></p>
-							<p style="margin-bottom: 10px;">국민 082-05-0014-838 유인숙(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(082050014838);"></p>
-                        </div>
-                        <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
-                            <h2 class="h4">신부측</h2>
-                            <p style="margin-bottom: 10px;">카카오 3333-03-4236204 김륜영
-                                <br>
-                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(3333034236204);">
-                                <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/Ej7nd3b1H')">
-                            </p>
-							<p style="margin-bottom: 10px;">국민 202-21-1546-638 김성호(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(202211546638);"></p>
-							<p style="margin-bottom: 10px;">국민 13081152-005236 변희숙(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(13081152005236);"></p>
+                          <button type="button" class="btn btn-wedding-primary" data-toggle="modal" data-target="#manModal">
+                            <img src="images/man.png" style="width:10%; height:auto;" alt=""> 신랑측 마음 전하기 </button>
+                          </br>
+                            <button type="button" class="btn btn-wedding-primary" data-toggle="modal" data-target="#womanModal">
+                              <img src="images/woman.png" style="width:10%; height:auto;" alt=""> 신부측 마음 전하기 </button>
                         </div>
                     </div>
                 </div>
@@ -423,13 +441,23 @@
             alert("복사되었습니다.");
         });
     }
+
+
     var container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
     var options = { //지도를 생성할 때 필요한 기본 옵션
-        center: new kakao.maps.LatLng(37.542906, 126.951608), //지도의 중심좌표.
+        center: new kakao.maps.LatLng(37.5422205, 126.9524396), //지도의 중심좌표.
         level: 3 //지도의 레벨(확대, 축소 정도)
     };
 
-    var map = new kakao.maps.StaticMap(container, options); //지도 생성 및 객체 리턴
+    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+    var markerPosition = new kakao.maps.LatLng(37.5422205, 126.9524396);
+
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    marker.setMap(map);
 
     $('.slider-for').slick({
         slidesToShow: 1,

@@ -2569,6 +2569,12 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
+.btn-wedding-primary {
+  color: #fff;
+  background-color: #575d62;
+  border-color: #929293;
+}
+
 .form-range {
   width: 100%;
   height: 1.5rem;
