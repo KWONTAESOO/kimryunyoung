@@ -22,7 +22,7 @@
 }
 
 .snow-bg {
-    background-image: url(https://theirmood.com/src/img/bg-effect-sakura-1.png),url(https://theirmood.com/src/img/bg-effect-sakura-2.png);
+    background-image: url(./snow/snow-1.png),url(./snow/snow-2.png);
 }
 
 .fall-bg {
