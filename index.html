@@ -486,11 +486,11 @@
       </div>
       <div class="modal-body">
       <p style="margin-bottom: 10px;">국민 064602-04-099745 권태수
-        <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(06460204099745,'권태수');">
+		<button  class="accountbtn" data-clipboard-text="06460204099745"> 복사하기 </button>
         <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/FJKXvPoGk')">
       </p>
-      <p style="margin-bottom: 10px;">국민 008-05-0024-541 권병우(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(008050024541,'권병우');"></p>
-      <p style="margin-bottom: 10px;">국민 082-05-0014-838 유인숙(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(082050014838,'유인숙');"></p>
+      <p style="margin-bottom: 10px;">국민 008-05-0024-541 권병우(혼주) <button  class="accountbtn" data-clipboard-text="008050024541"> 복사하기 </button></p>
+      <p style="margin-bottom: 10px;">국민 082-05-0014-838 유인숙(혼주) <button  class="accountbtn" data-clipboard-text="082050014838"> 복사하기 </button></p>
       </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -507,11 +507,11 @@
       </div>
       <div class="modal-body">
         <p style="margin-bottom: 10px;">카카오 3333-03-4236204 김륜영
-			<button  class="accountbtn" data-clipboard-text="3333034236204"> <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;"/> </button>
+			<button  class="accountbtn" data-clipboard-text="3333034236204"> 복사하기 </button>
             <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/Ej7nd3b1H')">
         </p>
-        <p style="margin-bottom: 10px;">국민 202-21-1546-638 김성호(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(202211546638,'김성호');"></p>
-        <p style="margin-bottom: 10px;">국민 13081152-005236 변희숙(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(13081152005236,'변희숙');"></p>
+        <p style="margin-bottom: 10px;">국민 202-21-1546-638 김성호(혼주) <button  class="accountbtn" data-clipboard-text="202211546638"> 복사하기 </button></p>
+        <p style="margin-bottom: 10px;">국민 13081152-005236 변희숙(혼주) <button  class="accountbtn" data-clipboard-text="13081152005236"> 복사하기 </button></p>
       </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -580,13 +580,11 @@
     clipboard.on('success', function(e) {
       console.log(e);
 	  alert("복사되었습니다.");
-	  clipboard.destroy();
     });
     
     clipboard.on('error', function(e) {
       console.log(e);
 	  alert("다시 시도해주세요.");
-	  clipboard.destroy();
     });
 	
 
