@@ -663,15 +663,7 @@
     });
 
 
-	function kakaoShare(){
-		Kakao.Share.createCustomButton({
-  container: '#kakaotalk-sharing-btn',
-  templateId: 86073,
-  templateArgs: {
-    title: '2022.12.11 새하얀 어느 겨울',
-    description: '2022년 12월 11일 아펠가모 공덕에서 저희 결혼을 축하해주세요.',
-  },
-});
+	
 	}
 
 
@@ -689,5 +681,16 @@ line-height: 22px;
 	<button type="button" onclick="js:kakaoShare()">카카오 공유하기</button> 
     <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2022. Taez. All rights reserved.</div>
 </div>
+<script>
+function kakaoShare(){
+		Kakao.Share.createCustomButton({
+  container: '#kakaotalk-sharing-btn',
+  templateId: 86073,
+  templateArgs: {
+    title: '2022.12.11 새하얀 어느 겨울',
+    description: '2022년 12월 11일 아펠가모 공덕에서 저희 결혼을 축하해주세요.',
+  },
+});
+</script>
 </body>
 </html>
