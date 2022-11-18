@@ -507,7 +507,7 @@
       </div>
       <div class="modal-body">
         <p style="margin-bottom: 10px;">카카오 3333-03-4236204 김륜영
-            <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(3333034236204,'김륜영');">
+			<button  class="accountbtn" data-clipboard-text="3333034236204"> <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;"/> </button>
             <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/Ej7nd3b1H')">
         </p>
         <p style="margin-bottom: 10px;">국민 202-21-1546-638 김성호(혼주) <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(202211546638,'김성호');"></p>
@@ -570,17 +570,33 @@
 <!--<script type="text/javascript" src="./resources/map-script.js"></script>-->
 <!-- Custom Additional Script -->
 <script type="text/javascript" src="./resources/main-slider-fade.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 <script type="text/javascript">
     $(window).load(function () {
     });
+	
+    var clipboard = new ClipboardJS('.accountbtn');
+    
+    clipboard.on('success', function(e) {
+      console.log(e);
+	  alert("복사되었습니다.");
+	  clipboard.destroy();
+    });
+    
+    clipboard.on('error', function(e) {
+      console.log(e);
+	  alert("다시 시도해주세요.");
+	  clipboard.destroy();
+    });
+	
 
     function copy_to_clipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
             alert("복사되었습니다.");
         });
     }
-    
-    function copy_to_clipboard(str, target) {
+	
+	function copy_to_clipboard(str, target) {
       window.clipboardData.setData("Text", str);
       alert(target+"의 계좌("+str+")복사되었습니다.");
     }
