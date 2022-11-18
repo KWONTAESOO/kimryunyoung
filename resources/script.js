@@ -868,7 +868,4 @@ $(document).ready(function() {
 
 });
 
-function copy_to_clipboard(str, target) {
-  window.clipboardData.setData("Text", str);
-  alert(target+"의 계좌("+str+")복사되었습니다.");
-}
+
