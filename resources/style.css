@@ -224,10 +224,10 @@ table {
 }
 
 summary {
-  padding-bottom: 0.25em;
+  padding-bottom: 1.25em;
   font-size: 1.5em;
   font-weight: 100;
-  text-align: right;
+  text-align: center;
 }
 
 tr {
