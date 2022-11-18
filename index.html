@@ -49,6 +49,12 @@
     <style data-emotion="css" data-s=""></style>
     <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
     <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	<script>
+	if (!Kakao.isInitialized()) {
+        Kakao.init('537797782c0e32a54f6ca9efe75b3e8a');   <!--붙여넣기-->
+	}
+		</script>
     <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=537797782c0e32a54f6ca9efe75b3e8a"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -663,6 +669,7 @@
 
 
 </script>
+
 <div class="copyright-wrap" style="
 margin: 0 auto;
     width: 80%;
@@ -673,24 +680,33 @@ margin: 0 auto;
     font-family: Castoro,serif;
 line-height: 22px;
     text-align: center;">
-	<button type="button" class="kakaotalk-sharing-btn" onclick="js:kakaoShare()">카카오 공유하기</button> 
+	<button onclick="sendKakao()" style="width:50px;border:0;background-color:transparent;" style="text-align:center">
+  <img src="./images/kakao.png" style="width:100%" alt="카카오톡 공유" />
+</button>
+<button  class="accountbtn" style="width:50px;border:0;background-color:transparent;" data-clipboard-text="https://kwontaesoo.github.io/kimryunyoung/">
+<img src="./images/link.png" style="width:100%" alt="링크 복사" />
+</button>
     <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2022. Taez. All rights reserved.</div>
 </div>
-	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 	<script>
-        Kakao.init('537797782c0e32a54f6ca9efe75b3e8a');   <!--붙여넣기-->
-        Kakao.isInitialized();  
 
-		function kakaoShare(){
-				Kakao.Share.createCustomButton({
-		  container: '#kakaotalk-sharing-btn',
-		  templateId: 86073,
-		  templateArgs: {
-			title: '2022.12.11 새하얀 어느 겨울',
-			description: '2022년 12월 11일 아펠가모 공덕에서 저희 결혼을 축하해주세요.',
-		  },
-		});
-		}
+var thumbImg = $('meta[property="og:image"]').attr('content'); //og이미지 주소
+var thumbTitle = $('meta[property="og:title"]').attr('content'); //og타이틀
+var thumbDesc = $('meta[property="og:description"]').attr('content'); //og설명
+var linkUrl = $('meta[property="og:url"]').attr('content'); //url
+
+var sendKakao = function() {
+    // 메시지 공유 함수
+  Kakao.Link.sendScrap({
+    requestUrl: linkUrl, // 페이지 url
+    templateId: 86073, // 메시지템플릿 번호
+    templateArgs: {
+      THUMB: thumbImg, // 썸네일 주소
+      TITLE: thumbTitle, // 제목 텍스트
+      DESC: thumbDesc, // 설명 텍스트
+    },
+  });
+};
 	</script>
 </body>
 </html>
