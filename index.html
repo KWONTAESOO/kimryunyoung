@@ -579,6 +579,11 @@
             alert("복사되었습니다.");
         });
     }
+    
+    function copy_to_clipboard(str, target) {
+      window.clipboardData.setData("Text", str);
+      alert(target+"의 계좌("+str+")복사되었습니다.");
+    }
 
 
     var container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
