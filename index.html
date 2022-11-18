@@ -50,11 +50,7 @@
     <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
     <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=537797782c0e32a54f6ca9efe75b3e8a"></script>
-	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-	<script>
-        Kakao.init('537797782c0e32a54f6ca9efe75b3e8a');   <!--붙여넣기-->
-        Kakao.isInitialized();  
-    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1P8RR0SR4"></script>
     <script>
@@ -681,16 +677,20 @@ line-height: 22px;
 	<button type="button" onclick="js:kakaoShare()">카카오 공유하기</button> 
     <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2022. Taez. All rights reserved.</div>
 </div>
-<script>
-function kakaoShare(){
-		Kakao.Share.createCustomButton({
-  container: '#kakaotalk-sharing-btn',
-  templateId: 86073,
-  templateArgs: {
-    title: '2022.12.11 새하얀 어느 겨울',
-    description: '2022년 12월 11일 아펠가모 공덕에서 저희 결혼을 축하해주세요.',
-  },
-});
-</script>
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	<script>
+        Kakao.init('537797782c0e32a54f6ca9efe75b3e8a');   <!--붙여넣기-->
+        Kakao.isInitialized();  
+
+		function kakaoShare(){
+				Kakao.Share.createCustomButton({
+		  container: '#kakaotalk-sharing-btn',
+		  templateId: 86073,
+		  templateArgs: {
+			title: '2022.12.11 새하얀 어느 겨울',
+			description: '2022년 12월 11일 아펠가모 공덕에서 저희 결혼을 축하해주세요.',
+		  },
+		});
+	</script>
 </body>
 </html>
